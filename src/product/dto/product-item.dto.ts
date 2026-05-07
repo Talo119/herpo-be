@@ -10,14 +10,14 @@ export class ProductItemDto {
   @IsString()
   @IsNotEmpty()
   @IsUUID()
-  id: string;
+  id!: string;
 
   @IsString()
   @IsNotEmpty()
-  name: string;
+  name!: string;
 
   @IsNumber()
   @IsNotEmpty()
   @IsPositive()
-  price: number;
+  price!: number;
 }
