@@ -41,6 +41,26 @@ model Product {
   orderItems OrderItem[]
 }
 
+model Client {
+  id        String    @id @default(uuid())
+  name      String
+  email     String    @unique
+  address   String?
+  phone     String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Supplier {
+  id        String    @id @default(uuid())
+  name      String
+  email     String    @unique
+  phone     String?
+  address   String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
 model OrderHeader {
   id        String      @id @default(uuid())
   createdAt DateTime    @default(now())
